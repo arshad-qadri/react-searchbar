@@ -1,16 +1,10 @@
 .App {
-  text-align: center;
+  text-align: left;
+  background-color: #282c34;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.link {
+  margin: 5rem;
+  color: #fff;
 }
 
 .App-header {
@@ -19,20 +13,78 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.App-header input {
+  height: 40px;
+  width: 20rem;
+  margin-top: 2rem;
+  font-size: 20px;
+  padding: 0 1rem;
+  outline: none;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ========================================================================
+slider
+======================================================================== */
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+}
+.slider-panel {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  width: 60vw;
+  height: 60vh;
+  position: relative;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 2s;
+  border: 5px solid orange;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.icon {
+  width: 100%;
+}
+.icon .left,
+.icon .right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  outline: none;
+  border: 5px solid orange;
+  font-size: 1.5rem;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(255, 255, 255, 0.541); */
+  cursor: pointer;
+}
+.icon .left:hover,
+.icon .right:hover {
+  box-shadow: 5px 3px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.icon .left {
+  left: 30px;
+}
+.icon .right {
+  right: 30px;
 }
